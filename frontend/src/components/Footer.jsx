@@ -5,11 +5,15 @@ export default function Footer() {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-center bg-cover bg-no-repeat pointer-events-none"
-        style={{ backgroundImage: "url('/images/fbackimg.png')", opacity: 0.12 }}
+        style={{ backgroundImage: "url('/images/fbackimg.png')", opacity: 0.2 }}
       />
 
+      {/* Left and right dark blue fades matching home page mood */}
+      <div className="absolute inset-y-0 left-0 w-1/2 pointer-events-none bg-gradient-to-r from-blue-950/55 via-blue-900/22 to-transparent" />
+      <div className="absolute inset-y-0 right-0 w-1/2 pointer-events-none bg-gradient-to-l from-blue-950/55 via-blue-900/22 to-transparent" />
+
       {/* Ambient glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-32 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-32 bg-blue-900/18 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-2xl mx-auto relative">
 
@@ -35,7 +39,7 @@ export default function Footer() {
           <span className="text-white/40 text-xs">PRANAV KAKADE</span>
           <span className="w-1 h-1 rounded-full bg-white/20" />
           <a
-            href="https://github.com/PranavKakade"
+            href="https://github.com/pranavdkakade"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/40 text-xs hover:text-accent transition-colors duration-200"

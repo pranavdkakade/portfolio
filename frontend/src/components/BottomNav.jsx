@@ -34,7 +34,13 @@ export default function BottomNav() {
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6 pointer-events-none'
       }`}
     >
-      <div className="flex items-center gap-1 bg-[#07111F]/90 border border-white/[0.07] backdrop-blur-xl rounded-full px-2 py-2 shadow-2xl shadow-black/50">
+      <div className="relative overflow-hidden flex items-center gap-1 bg-[#07111F]/90 border border-white/[0.07] backdrop-blur-xl rounded-full px-2 py-2 shadow-2xl shadow-black/50">
+
+        {/* Background image */}
+        <div
+          className="absolute inset-0 bg-center bg-cover bg-no-repeat pointer-events-none"
+          style={{ backgroundImage: "url('/images/fbackimg.png')", opacity: 0.18 }}
+        />
 
         {/* Main nav links */}
         {navItems.map(({ to, icon: Icon, label }) => (
