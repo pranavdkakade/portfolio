@@ -1,55 +1,83 @@
 import { useState, useEffect } from 'react'
-import { Code2, GraduationCap, Briefcase, Award, FileText, ExternalLink, Cloud, BarChart2, Brain, Database, Server, GitBranch, Box, Zap, Globe, Terminal, ArrowRight, Eye, X, Calendar, MapPin, CheckCircle2, Layers, Camera, Crown, Users } from 'lucide-react'
+import { Code2, GraduationCap, Briefcase, Award, FileText, ExternalLink, Database, Server, GitBranch, Box, Zap, Globe, Terminal, ArrowRight, Eye, X, Calendar, MapPin, CheckCircle2, Layers, Camera, Crown, Users } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const featuredProjects = [
   {
-    title: 'Portfolio Website',
-    description: 'A modern personal portfolio built with React + Vite on the frontend and FastAPI on the backend. Features smooth routing, dark navy UI, and contact form.',
-    tags: ['React', 'FastAPI', 'Tailwind'],
-    github: 'https://github.com/PranavKakade/portfolio',
+    title: 'AlphaMatrix',
+    description: 'AI-powered retail intelligence platform for product recognition, automated profit tracking, and real-time analytics.',
+    tags: ['React', 'FastAPI', 'Python', 'Tailwind'],
+    github: 'https://github.com/pranavdkakade/AlphaMetrics-',
     live: '#',
     banner: 'from-teal-900 to-teal-700',
+    bannerImage: '/images/alphamatrix.png',
     status: 'ACTIVE',
     statusColor: 'bg-blue-500/80 text-white',
     videoId: 'dQw4w9WgXcQ',
     date: 'Jan 2025',
     location: 'LPU, Punjab',
-    problem: 'No central place to showcase skills, projects, and contact info for recruiters visiting online.',
-    problemPoints: ['No unified personal brand online', 'Static HTML sites feel outdated and hard to maintain'],
-    solution: 'Built a full-stack portfolio using React + Vite with a FastAPI backend for the contact form and dynamic data serving.',
-    solutionPoints: ['Smooth client-side routing with React Router', 'Dark navy UI with Tailwind CSS animations'],
-    techStack: ['React', 'FastAPI', 'Tailwind', 'Python', 'Vite'],
-    keyFeatures: [
-      { icon: 'zap', text: 'Animated dark UI with custom cursor effect' },
-      { icon: 'layers', text: 'Component-based architecture for easy updates' },
-      { icon: 'check', text: 'Contact form powered by FastAPI backend' },
+    problem: 'Retail shopkeepers face difficulty in managing inventory and tracking profit efficiently.',
+    problemPoints: [
+      'No easy way to track product-wise profit',
+      'Manual inventory management leads to errors',
+      'Difficult to identify fast-selling vs slow-moving products',
+      'No intelligent system to analyze sales trends',
+      'Time wasted remembering purchase prices for each product',
     ],
-    challenge: '"Matching the design vision pixel-perfectly while keeping the Tailwind config minimal was the biggest challenge. Custom gradient tokens and animation utilities solved it."',
+    solution: 'Built AlphaMetrics, an AI-powered retail intelligence platform that automates product recognition, profit tracking, and analytics.',
+    solutionPoints: [
+      'Image-based product identification using AI',
+      'Automatic retrieval of buying price using image matching',
+      'Real-time profit calculation during sales',
+      'Centralized inventory and sales tracking system',
+      'Interactive analytics dashboard for business insights',
+    ],
+    techStack: ['React + Vite', 'Tailwind CSS', 'FastAPI', 'Python', 'OpenCV', 'CNN / Embeddings', 'FAISS / Vector DB', 'SQLite / PostgreSQL', 'Axios'],
+    keyFeatures: [
+      { icon: 'zap', text: 'AI-based product detection using image matching' },
+      { icon: 'layers', text: 'Automatic buying price retrieval from database' },
+      { icon: 'check', text: 'Real-time profit calculation on selling' },
+      { icon: 'layers', text: 'Inventory management with quantity tracking' },
+      { icon: 'check', text: 'Sales history tracking (product-wise and date-wise)' },
+      { icon: 'zap', text: 'Analytics dashboard with revenue trends and KPIs' },
+      { icon: 'layers', text: 'Monthly and product-level performance insights' },
+    ],
+    challenge: '"Handling real-world image variations such as lighting, angles, and color differences was the biggest challenge. I implemented image preprocessing and embedding-based similarity search to improve matching accuracy while keeping the AI pipeline responsive in real-time user interactions."',
   },
   {
-    title: 'Task Manager API',
-    description: 'RESTful API for task management with auth, CRUD operations, and PostgreSQL database. Built with FastAPI and SQLAlchemy.',
-    tags: ['FastAPI', 'PostgreSQL', 'JWT'],
-    github: 'https://github.com/PranavKakade/task-api',
+    title: 'CarrerConnect AI',
+    description: 'AI-powered interview preparation platform with personalized question generation, RAG, and automated answer evaluation.',
+    tags: ['Django', 'JavaScript', 'LangChain', 'FAISS', 'GROQ API', 'Python'],
+    github: 'https://github.com/pranavdkakade/Job-intership-portal',
     live: '#',
     banner: 'from-navy-700 to-slate-700',
+    bannerImage: '/images/CarrerConnect%20AI.png',
     status: 'LIVE',
     statusColor: 'bg-green-500/80 text-white',
     videoId: 'dQw4w9WgXcQ',
     date: 'Mar 2025',
     location: 'Remote',
-    problem: 'Most task APIs lack proper authentication and scalable schema design, making them insecure and hard to extend.',
-    problemPoints: ['Insecure endpoints without token-based auth', 'Poor relational schema with no user isolation'],
-    solution: 'Designed a secure RESTful API with JWT auth, role-based access, and a normalized PostgreSQL schema via SQLAlchemy.',
-    solutionPoints: ['JWT access + refresh token flow', 'Alembic migrations for schema versioning'],
-    techStack: ['FastAPI', 'PostgreSQL', 'SQLAlchemy', 'JWT', 'Python'],
-    keyFeatures: [
-      { icon: 'check', text: 'JWT Authentication with refresh tokens' },
-      { icon: 'layers', text: 'Full CRUD with user-scoped task isolation' },
-      { icon: 'zap', text: 'Auto-generated Swagger & ReDoc API docs' },
+    problem: 'Traditional interview preparation platforms lack personalization and intelligent evaluation, making practice sessions unrealistic and ineffective.',
+    problemPoints: [
+      'Generic questions not tailored to user skills or resume',
+      'No automated evaluation or feedback system',
+      'Limited analytics to track subject-wise performance',
     ],
-    challenge: '"Handling token refresh races in concurrent requests required implementing a mutex-style lock on the refresh endpoint to prevent duplicate token issuance."',
+    solution: 'Developed an AI-powered interview platform with multiple intelligent systems using LLMs and Retrieval-Augmented Generation (RAG) to generate personalized questions and evaluate answers.',
+    solutionPoints: [
+      'Multi-mode interview system (Random, Subject-Specific, Resume-Based)',
+      'RAG pipeline using LangChain + FAISS for contextual question generation',
+      'Automated answer evaluation using LLM-based scoring and semantic similarity',
+    ],
+    techStack: ['DJ - Django', 'JS - JavaScript', 'LC - LangChain', 'FS - FAISS', 'GR - GROQ API', 'PY - Python'],
+    keyFeatures: [
+      { icon: 'zap', text: 'Multi-mode AI Interview Engine (Random Topics and Subject-Specific)' },
+      { icon: 'layers', text: 'Resume-Based RAG Interview for personalized question generation' },
+      { icon: 'check', text: 'AI-driven answer evaluation with scoring and feedback' },
+      { icon: 'layers', text: 'User-specific interview history with performance tracking' },
+      { icon: 'zap', text: 'Dashboard with subject-wise proficiency visualization (bar graphs)' },
+    ],
+    challenge: '"Designing a scalable RAG pipeline required efficient handling of resume embeddings and vector storage, along with optimizing retrieval accuracy to ensure contextually relevant question generation and evaluation."',
   },
 ]
 
@@ -82,48 +110,36 @@ const skills = [
   { name: 'Postman',      abbr: 'PM',  Icon: null,       bg: 'bg-orange-400/15', fg: 'text-orange-400' },
 ]
 
+const toPublicFileUrl = (fileName) => `/${encodeURIComponent(fileName)}`
+
 const certifications = [
   {
-    title: 'AWS Cloud Practitioner',
-    issuer: 'Amazon Web Services',
-    date: 'Dec 2023',
-    link: '#',
-    icon: Cloud,
-    iconBg: 'bg-amber-500/15',
-    iconColor: 'text-amber-400',
+    title: 'Master Generative AI & Generative AI tools (ChatGPT & more)',
+    fileName: 'info-master-generative-ai-chatgpt-more.pdf',
   },
   {
-    title: 'Google Data Analytics',
-    issuer: 'Google Career Certs',
-    date: 'Oct 2023',
-    link: '#',
-    icon: BarChart2,
-    iconBg: 'bg-blue-500/15',
-    iconColor: 'text-blue-400',
+    title: 'Social Internship in Stambh Organization India',
+    fileName: 'Mr. Pranav Kakade Internship Experience Letter (1) (1).pdf',
   },
   {
-    title: 'Deep Learning Specialization',
-    issuer: 'DeepLearning.AI',
-    date: 'Aug 2023',
-    link: '#',
-    icon: Brain,
-    iconBg: 'bg-purple-500/15',
-    iconColor: 'text-purple-400',
+    title: 'Certified AI Foundations Associate Certificate',
+    fileName: 'Oracal (OCI) 2025 Certified AI Foundations Associate  Certificate.pdf',
   },
-]
+  {
+    title: 'Oracle Cloud Infrastructure 2025 Certified Foundations Associate Certificate',
+    fileName: 'Oracle Cloud Infrastructure 2025 Certified Foundations Associate Certificate.pdf',
+  },
+].map((cert) => ({
+  ...cert,
+  fileUrl: toPublicFileUrl(cert.fileName),
+}))
 
 const experience = [
   {
-    role: 'Full Stack Developer Intern',
-    company: 'Tech Company',
-    period: '2025 – Present',
-    desc: 'Built scalable web apps using React and FastAPI. Improved API response time by 40%.',
-  },
-  {
-    role: 'Frontend Developer',
-    company: 'Startup XYZ',
-    period: '2024 – 2025',
-    desc: 'Developed responsive UIs and integrated REST APIs for client-facing products.',
+    role: 'Social Internship',
+    company: 'Stambh Organization India',
+    period: 'June 10, 2024 - July 20, 2024',
+    desc: 'Completed a six-week internship with Stambh Organization India.',
   },
 ]
 
@@ -265,6 +281,67 @@ function ProjectModal({ project, onClose }) {
   )
 }
 
+function CertificateModal({ certificate, onClose }) {
+  useEffect(() => {
+    const handler = (e) => { if (e.key === 'Escape') onClose() }
+    window.addEventListener('keydown', handler)
+    return () => window.removeEventListener('keydown', handler)
+  }, [onClose])
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden'
+    return () => { document.body.style.overflow = '' }
+  }, [])
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-backdrop-in"
+      style={{ background: 'rgba(2,11,24,0.45)', backdropFilter: 'blur(6px)' }}
+      onClick={onClose}
+    >
+      <div
+        className="relative w-full max-w-5xl h-[88vh] rounded-2xl overflow-hidden flex flex-col animate-modal-pop"
+        style={{ background: '#0d1b2e', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05)' }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          onClick={onClose}
+          className="absolute top-3 right-3 z-20 w-8 h-8 flex items-center justify-center rounded-full bg-black/35 hover:bg-black/55 text-white/70 hover:text-white transition-all"
+        >
+          <X size={16} />
+        </button>
+
+        <div className="px-5 py-4 border-b border-white/10 bg-navy-900/70">
+          <p className="text-white/90 text-sm font-semibold pr-10 leading-relaxed">{certificate.title}</p>
+          <div className="mt-3 flex items-center gap-2">
+            <a
+              href={certificate.fileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold text-white bg-accent/80 hover:bg-accent transition-colors"
+            >
+              <ExternalLink size={12} /> Open Fullscreen
+            </a>
+            <a
+              href={certificate.fileUrl}
+              download={certificate.fileName}
+              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold text-white/85 bg-white/10 hover:bg-white/15 transition-colors"
+            >
+              <FileText size={12} /> Download PDF
+            </a>
+          </div>
+        </div>
+
+        <iframe
+          src={`${certificate.fileUrl}#toolbar=1&navpanes=0&scrollbar=1`}
+          title={certificate.title}
+          className="w-full h-full bg-white"
+        />
+      </div>
+    </div>
+  )
+}
+
 function SectionTitle({ icon: Icon, title }) {
   return (
     <div className="flex items-center gap-3 mb-6">
@@ -282,6 +359,7 @@ function SectionTitle({ icon: Icon, title }) {
 export default function Info() {
   const [hoveredIdx, setHoveredIdx] = useState(null)
   const [selectedProject, setSelectedProject] = useState(null)
+  const [selectedCertificate, setSelectedCertificate] = useState(null)
 
   return (
     <div className="min-h-screen bg-main-gradient px-6 py-10 pb-28 animate-fade-in">
@@ -297,18 +375,36 @@ export default function Info() {
         <div className="space-y-1">
           <p className="text-accent font-mono text-xs tracking-widest uppercase">About Me</p>
           <h1 className="text-3xl font-bold text-white">Pranav Kakade</h1>
-          <p className="text-white/50 text-sm leading-relaxed mt-3">
-            A passionate Full Stack Developer pursuing B.Tech at Lovely Professional University.
-            I build modern web applications with Python &amp; FastAPI on the backend, and React on the frontend.
-            I love clean code, elegant UIs, and solving real-world problems.
-          </p>
+          <div className="relative mt-4 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-navy-800/70 via-navy-900/70 to-[#091325] p-5 shadow-2xl shadow-black/20">
+            <div className="pointer-events-none absolute -top-10 -right-10 h-28 w-28 rounded-full bg-cyan-400/10 blur-2xl" />
+            <div className="pointer-events-none absolute -bottom-10 -left-10 h-24 w-24 rounded-full bg-blue-500/10 blur-2xl" />
+
+            <p className="text-[10px] font-black tracking-[0.22em] text-cyan-300/80 uppercase">About Me</p>
+            <p className="mt-3 text-white/70 text-sm leading-relaxed">
+              AI/ML-focused Computer Science engineer with experience in building end-to-end intelligent systems that combine machine learning, backend development, and data analytics. Developed applications including AI interview platforms using NLP and RAG, and retail intelligence systems integrating computer vision, vector embeddings, and real-time analytics.
+            </p>
+            <p className="mt-3 text-white/65 text-sm leading-relaxed">
+              Skilled in Python, C++, FastAPI, and modern JavaScript frameworks, with hands-on experience in scikit-learn, SQL, and scalable system design. Focused on delivering efficient, production-oriented AI solutions with clean architecture and strong performance.
+            </p>
+
+            {/* <div className="mt-4 flex flex-wrap gap-2">
+              {['AI/ML', 'NLP + RAG', 'Computer Vision', 'FastAPI', 'Python', 'System Design'].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-cyan-300/20 bg-cyan-300/5 px-3 py-1 text-[11px] font-semibold tracking-wide text-cyan-200/80"
+                >
+                  {item}
+                </span>
+              ))}
+            </div> */}
+          </div>
           <div className="h-6" />
 
           {/* CV + Social buttons row */}
           <div className="flex items-center gap-3 flex-wrap">
             <a
-              href="/resume.pdf"
-              download
+              href="/Pranav%20kakade%20CV%20NEW.pdf"
+              download="Pranav_Kakade_CV.pdf"
               className="group inline-flex items-center gap-2.5 px-6 py-3 bg-accent hover:bg-accent-dark rounded-xl text-white text-sm font-semibold transition-all duration-300 active:scale-95 shadow-lg shadow-accent/30 hover:shadow-accent/50"
             >
               <FileText size={16} />
@@ -413,7 +509,17 @@ export default function Info() {
                   </div>
 
                   {/* Banner */}
-                  <div className={`relative h-28 bg-gradient-to-br ${proj.banner} flex items-center justify-center`}>
+                  <div
+                    className={`relative h-28 ${proj.bannerImage ? '' : `bg-gradient-to-br ${proj.banner}`} flex items-center justify-center`}
+                    style={proj.bannerImage
+                      ? {
+                          backgroundImage: `linear-gradient(135deg, rgba(3, 8, 20, 0.45), rgba(8, 16, 32, 0.55)), url(${proj.bannerImage})`,
+                          backgroundSize: 'cover',
+                          backgroundPosition: 'center',
+                        }
+                      : undefined
+                    }
+                  >
                     <Code2 size={36} className="text-white/10" />
                     <span className={`absolute top-2.5 right-2.5 text-[10px] font-bold tracking-widest px-2 py-0.5 rounded-md ${proj.statusColor}`}>
                       {proj.status}
@@ -527,42 +633,37 @@ export default function Info() {
         {/* Certifications */}
         <div>
           <SectionTitle icon={Award} title="Certifications" />
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {certifications.map((cert, i) => {
-              const Icon = cert.icon
               return (
-                <div
+                <button
                   key={i}
-                  className="group flex flex-col bg-navy-800/40 border border-white/5 rounded-xl backdrop-blur-sm hover:border-accent/20 transition-colors overflow-hidden"
+                  onClick={() => setSelectedCertificate(cert)}
+                  className="group text-left flex flex-col bg-navy-800/45 border border-white/10 rounded-2xl backdrop-blur-sm hover:border-accent/30 transition-all duration-300 overflow-hidden hover:-translate-y-0.5"
                 >
-                  {/* Top: icon + title + issuer */}
-                  <div className="flex items-start gap-3 p-4">
-                    <div className={`flex-shrink-0 w-10 h-10 rounded-lg ${cert.iconBg} flex items-center justify-center`}>
-                      <Icon size={18} className={cert.iconColor} />
+                  <div className="relative h-44 bg-slate-950/40 border-b border-white/10 overflow-hidden">
+                    <iframe
+                      src={`${cert.fileUrl}#toolbar=0&navpanes=0&scrollbar=0&page=1`}
+                      title={`${cert.title} preview`}
+                      className="absolute inset-0 w-full h-full pointer-events-none scale-[1.02]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-transparent" />
+                    <div className="absolute right-3 top-3 px-2 py-1 rounded-md bg-black/40 border border-white/10 text-[10px] font-semibold tracking-wide text-white/80">
+                      PDF
                     </div>
-                    <div className="min-w-0">
-                      <p className="text-white group-hover:text-accent text-sm font-semibold leading-snug transition-colors duration-200">{cert.title}</p>
-                      <p className="text-white/35 text-xs font-mono mt-0.5 uppercase tracking-wide">{cert.issuer}</p>
+                    <div className="absolute inset-x-0 bottom-0 p-3">
+                      <div className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-black/35 text-white/80 text-[11px] font-medium">
+                        <Eye size={12} /> Click to Preview
+                      </div>
                     </div>
                   </div>
 
-                  {/* Divider */}
-                  <div className="h-px bg-white/5 mx-4" />
-
-                  {/* Bottom: date + view link */}
-                  <div className="flex items-center justify-between px-4 py-2.5">
-                    <p className="text-white/35 text-xs font-mono">Completed: {cert.date}</p>
-                    <a
-                      href={cert.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-accent text-xs font-semibold hover:text-white transition-colors duration-200"
-                    >
-                      VIEW CERTIFICATE
-                      <ExternalLink size={11} />
-                    </a>
+                  <div className="p-4">
+                    <p className="text-white/90 text-sm font-semibold leading-snug line-clamp-3 group-hover:text-cyan-300 transition-colors duration-200">
+                      {cert.title}
+                    </p>
                   </div>
-                </div>
+                </button>
               )
             })}
           </div>
@@ -618,6 +719,7 @@ export default function Info() {
 
       </div>
       {selectedProject && <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />}
+      {selectedCertificate && <CertificateModal certificate={selectedCertificate} onClose={() => setSelectedCertificate(null)} />}
     </div>
   )
 }

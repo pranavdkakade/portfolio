@@ -3,76 +3,112 @@ import { ExternalLink, Github, Code2, Eye, X, Calendar, MapPin, Zap, CheckCircle
 
 const projects = [
   {
-    title: 'Portfolio Website',
-    description: 'A modern personal portfolio built with React + Vite on the frontend and FastAPI on the backend. Features smooth routing, dark navy UI, and contact form.',
-    tags: ['React', 'FastAPI', 'Tailwind', 'Python'],
-    github: 'https://github.com/PranavKakade/portfolio',
+    title: 'AlphaMatrix',
+    description: 'AI-powered retail intelligence platform for product recognition, automated profit tracking, and real-time analytics.',
+    tags: ['React', 'FastAPI', 'Python', 'Tailwind'],
+    github: 'https://github.com/pranavdkakade/AlphaMetrics-',
     live: '#',
     banner: 'from-teal-900 via-teal-800 to-teal-700',
+    bannerImage: '/images/alphamatrix.png',
     status: 'ACTIVE',
     statusColor: 'bg-blue-500/80 text-white',
     videoId: 'dQw4w9WgXcQ',
     date: 'Jan 2025',
     location: 'LPU, Punjab',
-    problem: 'No central place to showcase skills, projects, and contact info for recruiters visiting online.',
-    problemPoints: ['No unified personal brand online', 'Static HTML sites feel outdated and hard to maintain'],
-    solution: 'Built a full-stack portfolio using React + Vite with a FastAPI backend for the contact form and dynamic data serving.',
-    solutionPoints: ['Smooth client-side routing with React Router', 'Dark navy UI with Tailwind CSS animations'],
-    techStack: ['React', 'FastAPI', 'Tailwind', 'Python', 'Vite'],
-    keyFeatures: [
-      { icon: 'zap', text: 'Animated dark UI with custom cursor effect' },
-      { icon: 'layers', text: 'Component-based architecture for easy updates' },
-      { icon: 'check', text: 'Contact form powered by FastAPI backend' },
+    problem: 'Retail shopkeepers face difficulty in managing inventory and tracking profit efficiently.',
+    problemPoints: [
+      'No easy way to track product-wise profit',
+      'Manual inventory management leads to errors',
+      'Difficult to identify fast-selling vs slow-moving products',
+      'No intelligent system to analyze sales trends',
+      'Time wasted remembering purchase prices for each product',
     ],
-    challenge: '"Matching the design vision pixel-perfectly while keeping the Tailwind config minimal was the biggest challenge. Custom gradient tokens and animation utilities solved it."',
+    solution: 'Built AlphaMetrics, an AI-powered retail intelligence platform that automates product recognition, profit tracking, and analytics.',
+    solutionPoints: [
+      'Image-based product identification using AI',
+      'Automatic retrieval of buying price using image matching',
+      'Real-time profit calculation during sales',
+      'Centralized inventory and sales tracking system',
+      'Interactive analytics dashboard for business insights',
+    ],
+    techStack: ['React + Vite', 'Tailwind CSS', 'FastAPI', 'Python', 'OpenCV', 'CNN / Embeddings', 'FAISS / Vector DB', 'SQLite / PostgreSQL', 'Axios'],
+    keyFeatures: [
+      { icon: 'zap', text: 'AI-based product detection using image matching' },
+      { icon: 'layers', text: 'Automatic buying price retrieval from database' },
+      { icon: 'check', text: 'Real-time profit calculation on selling' },
+      { icon: 'layers', text: 'Inventory management with quantity tracking' },
+      { icon: 'check', text: 'Sales history tracking (product-wise and date-wise)' },
+      { icon: 'zap', text: 'Analytics dashboard with revenue trends and KPIs' },
+      { icon: 'layers', text: 'Monthly and product-level performance insights' },
+    ],
+    challenge: '"Handling real-world image variations such as lighting, angles, and color differences was the biggest challenge. I implemented image preprocessing and embedding-based similarity search to improve matching accuracy while keeping the AI pipeline responsive in real-time user interactions."',
   },
   {
-    title: 'Task Manager API',
-    description: 'RESTful API for task management with authentication, CRUD operations, and PostgreSQL database. Built with FastAPI and SQLAlchemy.',
-    tags: ['FastAPI', 'PostgreSQL', 'SQLAlchemy', 'JWT'],
-    github: 'https://github.com/PranavKakade/task-api',
+    title: 'CarrerConnect AI',
+    description: 'AI-powered interview preparation platform with personalized question generation, RAG, and automated answer evaluation.',
+    tags: ['Django', 'JavaScript', 'LangChain', 'FAISS', 'GROQ API', 'Python'],
+    github: 'https://github.com/pranavdkakade/Job-intership-portal',
     live: '#',
-    banner: 'from-slate-800 via-slate-700 to-slate-600',
+    banner: 'from-navy-700 to-slate-700',
+    bannerImage: '/images/CarrerConnect%20AI.png',
     status: 'LIVE',
     statusColor: 'bg-green-500/80 text-white',
     videoId: 'dQw4w9WgXcQ',
     date: 'Mar 2025',
     location: 'Remote',
-    problem: 'Most task APIs lack proper authentication and scalable schema design, making them insecure and hard to extend.',
-    problemPoints: ['Insecure endpoints without token-based auth', 'Poor relational schema with no user isolation'],
-    solution: 'Designed a secure RESTful API with JWT auth, role-based access, and a normalized PostgreSQL schema via SQLAlchemy.',
-    solutionPoints: ['JWT access + refresh token flow', 'Alembic migrations for schema versioning'],
-    techStack: ['FastAPI', 'PostgreSQL', 'SQLAlchemy', 'JWT', 'Python'],
-    keyFeatures: [
-      { icon: 'check', text: 'JWT Authentication with refresh tokens' },
-      { icon: 'layers', text: 'Full CRUD with user-scoped task isolation' },
-      { icon: 'zap', text: 'Auto-generated Swagger & ReDoc API docs' },
+    problem: 'Traditional interview preparation platforms lack personalization and intelligent evaluation, making practice sessions unrealistic and ineffective.',
+    problemPoints: [
+      'Generic questions not tailored to user skills or resume',
+      'No automated evaluation or feedback system',
+      'Limited analytics to track subject-wise performance',
     ],
-    challenge: '"Handling token refresh races in concurrent requests required implementing a mutex-style lock on the refresh endpoint to prevent duplicate token issuance."',
+    solution: 'Developed an AI-powered interview platform with multiple intelligent systems using LLMs and Retrieval-Augmented Generation (RAG) to generate personalized questions and evaluate answers.',
+    solutionPoints: [
+      'Multi-mode interview system (Random, Subject-Specific, Resume-Based)',
+      'RAG pipeline using LangChain + FAISS for contextual question generation',
+      'Automated answer evaluation using LLM-based scoring and semantic similarity',
+    ],
+    techStack: ['DJ - Django', 'JS - JavaScript', 'LC - LangChain', 'FS - FAISS', 'GR - GROQ API', 'PY - Python'],
+    keyFeatures: [
+      { icon: 'zap', text: 'Multi-mode AI Interview Engine (Random Topics and Subject-Specific)' },
+      { icon: 'layers', text: 'Resume-Based RAG Interview for personalized question generation' },
+      { icon: 'check', text: 'AI-driven answer evaluation with scoring and feedback' },
+      { icon: 'layers', text: 'User-specific interview history with performance tracking' },
+      { icon: 'zap', text: 'Dashboard with subject-wise proficiency visualization (bar graphs)' },
+    ],
+    challenge: '"Designing a scalable RAG pipeline required efficient handling of resume embeddings and vector storage, along with optimizing retrieval accuracy to ensure contextually relevant question generation and evaluation."',
   },
   {
-    title: 'E-Commerce Store',
-    description: 'Full-stack e-commerce application with cart, payments, and admin dashboard. React frontend with Node.js backend.',
-    tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    github: 'https://github.com/PranavKakade/ecommerce',
+    title: 'AthenaCode AI',
+    description: 'Chrome extension + FastAPI backend that analyzes GitHub repositories with embeddings, FAISS retrieval, and context-aware AI explanations.',
+    tags: ['React', 'FastAPI', 'Python', 'Groq API', 'FAISS', 'Tree-sitter', 'Chrome Extension'],
+    github: 'https://github.com/pranavdkakade/AthenaCode-AI',
     live: '#',
-    banner: 'from-purple-900 via-purple-800 to-indigo-800',
-    status: 'COMPLETED',
+    banner: 'from-purple-900 via-indigo-800 to-blue-800',
+    status: 'Chrome Extension',
     statusColor: 'bg-purple-500/80 text-white',
     videoId: 'dQw4w9WgXcQ',
     date: 'Jun 2024',
     location: 'LPU, Punjab',
-    problem: 'Building a production-grade store requires integrating payments, inventory, and user sessions without security holes.',
-    problemPoints: ['Stripe webhook verification often skipped', 'Cart state lost on page refresh without persistence'],
-    solution: 'Built a full MERN stack store with server-side Stripe webhook validation, Redux cart persistence, and an admin dashboard.',
-    solutionPoints: ['Stripe webhook signature verification on every event', 'Redux Persist for seamless cart state across sessions'],
-    techStack: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redux'],
-    keyFeatures: [
-      { icon: 'check', text: 'Stripe Checkout with webhook order confirmation' },
-      { icon: 'layers', text: 'Admin dashboard with real-time order management' },
-      { icon: 'zap', text: 'Persistent cart with Redux + localStorage' },
+    problem: 'Understanding an unfamiliar GitHub repository takes too long when logic is spread across dozens of files, and static docs are usually outdated.',
+    problemPoints: [
+      'Developers struggle to trace feature flow across files quickly',
+      'Manual code reading is slow for onboarding and debugging',
     ],
-    challenge: '"Reconciling optimistic UI cart updates with actual stock availability required a debounced server-side stock check before checkout confirmation."',
+    solution: 'Built CodeAtlas AI, a Chrome extension + FastAPI backend that clones a repo, chunks code, indexes embeddings in FAISS, and answers natural-language questions with context-aware explanations via Groq.',
+    solutionPoints: [
+      'Repository analysis pipeline with automatic clone, parse, chunk, and vector index',
+      'RAG-based query flow that retrieves relevant code chunks before LLM response',
+    ],
+    techStack: ['RE - React', 'FA - FastAPI', 'PY - Python', 'GR - Groq API', 'FS - FAISS', 'TS - Tree-sitter', 'CH - Chrome Extension (MV3)'],
+    keyFeatures: [
+      { icon: 'zap', text: 'One-click Analyze Repository from GitHub pages inside a side panel' },
+      { icon: 'layers', text: 'Semantic code search using embeddings + FAISS for relevant context retrieval' },
+      { icon: 'check', text: 'Natural-language Q&A with structured references (file path, function, snippet)' },
+      { icon: 'layers', text: 'Persistent repository indexes on disk for faster repeat queries' },
+      { icon: 'zap', text: 'GitHub-aware extension UX with in-browser developer workflow' },
+    ],
+    challenge: '"Resolving embedding and index dimension mismatches and stale cache behavior required rebuilding index storage paths and enforcing fresh FAISS indexing when model dimensions changed."',
   },
   {
     title: 'Chat Application',
@@ -398,7 +434,17 @@ export default function Projects() {
                 </div>
 
                 {/* Banner */}
-                <div className={`relative h-24 sm:h-28 bg-gradient-to-br ${project.banner} flex items-center justify-center overflow-hidden`}>
+                <div
+                  className={`relative h-24 sm:h-28 ${project.bannerImage ? '' : `bg-gradient-to-br ${project.banner}`} flex items-center justify-center overflow-hidden`}
+                  style={project.bannerImage
+                    ? {
+                        backgroundImage: `linear-gradient(135deg, rgba(3, 8, 20, 0.45), rgba(8, 16, 32, 0.55)), url(${project.bannerImage})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                      }
+                    : undefined
+                  }
+                >
                   <Code2 size={36} className="text-white/10" />
                   {/* Status badge */}
                   <span className={`absolute top-2.5 right-2.5 text-[10px] font-bold tracking-widest px-2 py-0.5 rounded-md ${project.statusColor}`}>
