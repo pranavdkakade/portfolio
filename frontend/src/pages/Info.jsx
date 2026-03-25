@@ -110,6 +110,16 @@ const skills = [
   { name: 'Postman',      abbr: 'PM',  Icon: null,       bg: 'bg-orange-400/15', fg: 'text-orange-400' },
 ]
 
+const softSkills = [
+  { name: 'Communication', abbr: null, Icon: Users, bg: 'bg-purple-400/15', fg: 'text-purple-400' },
+  { name: 'Teamwork', abbr: null, Icon: Users, bg: 'bg-green-400/15', fg: 'text-green-400' },
+  { name: 'Problem Solving', abbr: null, Icon: Zap, bg: 'bg-yellow-400/15', fg: 'text-yellow-400' },
+  { name: 'Adaptability', abbr: null, Icon: Crown, bg: 'bg-blue-400/15', fg: 'text-blue-400' },
+  { name: 'Leadership', abbr: null, Icon: Crown, bg: 'bg-orange-400/15', fg: 'text-orange-400' },
+  { name: 'Time Management', abbr: null, Icon: Calendar, bg: 'bg-cyan-400/15', fg: 'text-cyan-400' },
+  { name: 'Creativity', abbr: null, Icon: Camera, bg: 'bg-pink-400/15', fg: 'text-pink-400' },
+]
+
 const toPublicFileUrl = (fileName) => `/${encodeURIComponent(fileName)}`
 
 const certifications = [
@@ -597,9 +607,9 @@ export default function Info() {
           </div>
         </div>
 
-        {/* Skills */}
+        {/* Technical Skills */}
         <div>
-          <SectionTitle icon={Code2} title="Skills" />
+          <SectionTitle icon={Code2} title="Technical Skills" />
           <div className="flex flex-wrap gap-2">
             {skills.map((skill) => {
               const IconComp = skill.Icon
@@ -611,8 +621,29 @@ export default function Info() {
                   <span className={`flex items-center justify-center w-6 h-6 rounded-md flex-shrink-0 ${skill.bg} ${skill.fg}`}>
                     {skill.abbr
                       ? <span className="text-[9px] font-bold leading-none">{skill.abbr}</span>
-                      : <IconComp size={12} />
+                      : IconComp ? <IconComp size={12} /> : null
                     }
+                  </span>
+                  {skill.name}
+                </span>
+              )
+            })}
+          </div>
+        </div>
+
+        {/* Soft Skills */}
+        <div>
+          <SectionTitle icon={Users} title="Soft Skills" />
+          <div className="flex flex-wrap gap-2">
+            {softSkills.map((skill) => {
+              const IconComp = skill.Icon
+              return (
+                <span
+                  key={skill.name}
+                  className="flex items-center gap-2 pl-1.5 pr-4 py-1.5 bg-navy-800/60 border border-white/10 rounded-full text-sm text-white/80 font-medium hover:border-accent/25 hover:bg-navy-700/50 transition-colors cursor-default select-none"
+                >
+                  <span className={`flex items-center justify-center w-6 h-6 rounded-md flex-shrink-0 ${skill.bg} ${skill.fg}`}>
+                    {IconComp ? <IconComp size={12} /> : null}
                   </span>
                   {skill.name}
                 </span>
