@@ -576,10 +576,24 @@ export default function Info() {
         {/* Education */}
         <div>
           <SectionTitle icon={GraduationCap} title="Education" />
-          <div className="bg-navy-800/40 border border-white/5 rounded-xl p-5 backdrop-blur-sm hover:border-accent/20 transition-colors">
-            <p className="text-white font-semibold">B.Tech – Computer Science &amp; Engineering</p>
-            <p className="text-accent text-sm font-mono mt-1">Lovely Professional University</p>
-            <p className="text-white/40 text-xs mt-1 font-mono">2023 – 2027</p>
+          <div className="space-y-3">
+            <div className="bg-navy-800/40 border border-white/5 rounded-xl p-5 backdrop-blur-sm hover:border-accent/20 transition-colors">
+              <p className="text-white font-semibold">B.Tech – Computer Science &amp; Engineering</p>
+              <p className="text-accent text-sm font-mono mt-1">Lovely Professional University</p>
+              <p className="text-white/40 text-xs mt-1 font-mono">2023 – 2027</p>
+            </div>
+            <div className="bg-navy-800/40 border border-white/5 rounded-xl p-5 backdrop-blur-sm hover:border-accent/20 transition-colors">
+              <p className="text-white font-semibold">Intermediate</p>
+              <p className="text-accent text-sm font-mono mt-1">Chate School</p>
+              <p className="text-white/40 text-xs mt-1 font-mono">Aurangabad, Maharashtra</p>
+              <p className="text-white/40 text-xs mt-1 font-mono">March’ 21- May’22</p>
+            </div>
+            <div className="bg-navy-800/40 border border-white/5 rounded-xl p-5 backdrop-blur-sm hover:border-accent/20 transition-colors">
+              <p className="text-white font-semibold">Matriculation</p>
+              <p className="text-accent text-sm font-mono mt-1">Decent School</p>
+              <p className="text-white/40 text-xs mt-1 font-mono">Kota, Rajasthan</p>
+              <p className="text-white/40 text-xs mt-1 font-mono">March’ 20- May’21</p>
+            </div>
           </div>
         </div>
 
