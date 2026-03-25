@@ -101,7 +101,7 @@ export default function Home() {
 
       {/* GitHub Star Button */}
       <a
-        href="https://github.com/PranavSharma"
+        href="https://github.com/pranavdkakade"
         target="_blank"
         rel="noopener noreferrer"
         className="absolute top-5 right-5 flex items-center gap-2 bg-navy-800/80 border border-white/10 backdrop-blur-sm text-white text-xs font-mono tracking-widest px-4 py-2 rounded-full hover:border-accent/50 hover:bg-accent/10 transition-all duration-300 group z-10"
