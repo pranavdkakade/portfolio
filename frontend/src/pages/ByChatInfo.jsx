@@ -24,8 +24,27 @@ const FAQ = [
     type: 'education',
     a: "Here's my educational background:",
     data: [
-      { school: 'Lovely Professional University', degree: 'B.Tech Computer Science', years: '2022–2026', color: '#22c55e' },
-      { school: 'Delhi Public School', degree: 'Class XII · Science Stream', years: '2020–2022', color: '#f59e0b' },
+      {
+        school: 'Lovely Professional University',
+        degree: 'B.Tech – Computer Science & Engineering',
+        years: '2023 – 2027',
+        color: '#22c55e',
+        location: 'Punjab'
+      },
+      {
+        school: 'Chate School',
+        degree: 'Intermediate',
+        years: 'March’ 21- May’22',
+        color: '#f59e0b',
+        location: 'Aurangabad, Maharashtra'
+      },
+      {
+        school: 'Decent School',
+        degree: 'Matriculation',
+        years: 'March’ 20- May’21',
+        color: '#3b82f6',
+        location: 'Kota, Rajasthan'
+      },
     ],
   },
   {
@@ -64,11 +83,11 @@ const FAQ = [
     type: 'contact',
     a: "Here's how to reach me:",
     data: {
-      email: 'pranavkakade@example.com',
+      email: 'pranavkakade.official@gmail.com',
       phone: '+91 98765 43210',
-      github: 'github.com/PranavKakade',
-      linkedin: 'linkedin.com/in/pranavkakade',
-      twitter: 'twitter.com/pranavkakade',
+      github: 'https://github.com/pranavdkakade',
+      linkedin: 'https://linkedin.com/in/pranavdkakade',
+      twitter: 'https://twitter.com/pranavdkakade',
     },
   },
   {
