@@ -416,7 +416,7 @@ export default function Info() {
 
               {/* X / Twitter */}
               <a
-                href="https://x.com/PranavKakade"
+                href="https://x.com/PranavK77918559"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group/s flex items-center overflow-hidden w-10 hover:w-28 h-10 rounded-xl bg-white/[0.04] border border-white/[0.06] hover:border-accent/30 hover:bg-accent/5 text-white/40 hover:text-white/90 transition-all duration-300 ease-in-out"
@@ -433,7 +433,7 @@ export default function Info() {
 
               {/* LinkedIn */}
               <a
-                href="https://linkedin.com/in/pranav-kakade"
+                href="https://www.linkedin.com/in/pranav998/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group/li flex items-center overflow-hidden w-10 hover:w-36 h-10 rounded-xl bg-white/[0.04] border border-white/[0.06] hover:border-accent/30 hover:bg-accent/5 text-white/40 hover:text-white/90 transition-all duration-300 ease-in-out"
@@ -450,7 +450,7 @@ export default function Info() {
 
               {/* GitHub */}
               <a
-                href="https://github.com/PranavKakade"
+                href="https://github.com/pranavdkakade"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group/gh flex items-center overflow-hidden w-10 hover:w-32 h-10 rounded-xl bg-white/[0.04] border border-white/[0.06] hover:border-accent/30 hover:bg-accent/5 text-white/40 hover:text-white/90 transition-all duration-300 ease-in-out"
