@@ -45,39 +45,37 @@ const featuredProjects = [
     challenge: '"Handling real-world image variations such as lighting, angles, and color differences was the biggest challenge. I implemented image preprocessing and embedding-based similarity search to improve matching accuracy while keeping the AI pipeline responsive in real-time user interactions."',
   },
   {
-    title: 'CarrerConnect AI',
-    description: 'AI-powered interview preparation platform with personalized question generation, RAG, and automated answer evaluation.',
-    tags: ['Django', 'JavaScript', 'LangChain', 'FAISS', 'GROQ API', 'Python'],
-    github: 'https://github.com/pranavdkakade/Job-intership-portal',
+    title: 'AthenaCode AI',
+    description: 'Chrome extension + FastAPI backend that analyzes GitHub repositories with embeddings, FAISS retrieval, and context-aware AI explanations.',
+    tags: ['React', 'FastAPI', 'Python', 'Groq API', 'FAISS', 'Tree-sitter', 'Chrome Extension'],
+    github: 'https://github.com/pranavdkakade/AthenaCode-AI',
     live: '#',
-    banner: 'from-navy-700 to-slate-700',
-    bannerImage: '/images/CarrerConnect%20AI.png',
-    status: 'LIVE',
-    statusColor: 'bg-green-500/80 text-white',
+    banner: 'from-purple-900 via-indigo-800 to-blue-800',
+    bannerImage: '/images/extension.png',
+    status: 'Chrome Extension',
+    statusColor: 'bg-purple-500/80 text-white',
     videoId: 'dQw4w9WgXcQ',
-    date: 'Mar 2025',
-    location: 'Remote',
-    problem: 'Traditional interview preparation platforms lack personalization and intelligent evaluation, making practice sessions unrealistic and ineffective.',
+    date: 'Jun 2024',
+    location: 'LPU, Punjab',
+    problem: 'Understanding an unfamiliar GitHub repository takes too long when logic is spread across dozens of files, and static docs are usually outdated.',
     problemPoints: [
-      'Generic questions not tailored to user skills or resume',
-      'No automated evaluation or feedback system',
-      'Limited analytics to track subject-wise performance',
+      'Developers struggle to trace feature flow across files quickly',
+      'Manual code reading is slow for onboarding and debugging',
     ],
-    solution: 'Developed an AI-powered interview platform with multiple intelligent systems using LLMs and Retrieval-Augmented Generation (RAG) to generate personalized questions and evaluate answers.',
+    solution: 'Built CodeAtlas AI, a Chrome extension + FastAPI backend that clones a repo, chunks code, indexes embeddings in FAISS, and answers natural-language questions with context-aware explanations via Groq.',
     solutionPoints: [
-      'Multi-mode interview system (Random, Subject-Specific, Resume-Based)',
-      'RAG pipeline using LangChain + FAISS for contextual question generation',
-      'Automated answer evaluation using LLM-based scoring and semantic similarity',
+      'Repository analysis pipeline with automatic clone, parse, chunk, and vector index',
+      'RAG-based query flow that retrieves relevant code chunks before LLM response',
     ],
-    techStack: ['DJ - Django', 'JS - JavaScript', 'LC - LangChain', 'FS - FAISS', 'GR - GROQ API', 'PY - Python'],
+    techStack: ['RE - React', 'FA - FastAPI', 'PY - Python', 'GR - Groq API', 'FS - FAISS', 'TS - Tree-sitter', 'CH - Chrome Extension (MV3)'],
     keyFeatures: [
-      { icon: 'zap', text: 'Multi-mode AI Interview Engine (Random Topics and Subject-Specific)' },
-      { icon: 'layers', text: 'Resume-Based RAG Interview for personalized question generation' },
-      { icon: 'check', text: 'AI-driven answer evaluation with scoring and feedback' },
-      { icon: 'layers', text: 'User-specific interview history with performance tracking' },
-      { icon: 'zap', text: 'Dashboard with subject-wise proficiency visualization (bar graphs)' },
+      { icon: 'zap', text: 'One-click Analyze Repository from GitHub pages inside a side panel' },
+      { icon: 'layers', text: 'Semantic code search using embeddings + FAISS for relevant context retrieval' },
+      { icon: 'check', text: 'Natural-language Q&A with structured references (file path, function, snippet)' },
+      { icon: 'layers', text: 'Persistent repository indexes on disk for faster repeat queries' },
+      { icon: 'zap', text: 'GitHub-aware extension UX with in-browser developer workflow' },
     ],
-    challenge: '"Designing a scalable RAG pipeline required efficient handling of resume embeddings and vector storage, along with optimizing retrieval accuracy to ensure contextually relevant question generation and evaluation."',
+    challenge: '"Resolving embedding and index dimension mismatches and stale cache behavior required rebuilding index storage paths and enforcing fresh FAISS indexing when model dimensions changed."',
   },
 ]
 
@@ -189,14 +187,13 @@ function ProjectModal({ project, onClose }) {
           <X size={16} />
         </button>
 
+        {/* ══════════════ LEFT — Image ══════════════ */}
         <div className="flex-shrink-0 w-full md:w-[42%] bg-black flex items-center justify-center min-h-[220px] md:min-h-0">
-          <iframe
-            src={`https://www.youtube.com/embed/${project.videoId}?autoplay=0&rel=0`}
-            title={`${project.title} demo`}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="w-full h-full min-h-[220px] md:min-h-full"
-            style={{ minHeight: '220px', aspectRatio: '16/9' }}
+          <img
+            src={project.bannerImage}
+            alt={project.title + ' preview'}
+            className="w-full h-full object-contain min-h-[220px] md:min-h-full rounded-none"
+            style={{ minHeight: '220px', aspectRatio: '16/9', maxHeight: '350px', background: '#0a1628' }}
           />
         </div>
 

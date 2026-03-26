@@ -85,6 +85,7 @@ const projects = [
     github: 'https://github.com/pranavdkakade/AthenaCode-AI',
     live: '#',
     banner: 'from-purple-900 via-indigo-800 to-blue-800',
+    bannerImage: '/images/extension.png',
     status: 'Chrome Extension',
     statusColor: 'bg-purple-500/80 text-white',
     videoId: 'dQw4w9WgXcQ',
@@ -243,15 +244,13 @@ function ProjectModal({ project, onClose }) {
           <X size={16} />
         </button>
 
-        {/* ══════════════ LEFT — Video ══════════════ */}
+        {/* ══════════════ LEFT — Image ══════════════ */}
         <div className="flex-shrink-0 w-full md:w-[42%] bg-black flex items-center justify-center min-h-[220px] md:min-h-0">
-          <iframe
-            src={`https://www.youtube.com/embed/${project.videoId}?autoplay=0&rel=0`}
-            title={`${project.title} demo`}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="w-full h-full min-h-[220px] md:min-h-full"
-            style={{ minHeight: '220px', aspectRatio: '16/9' }}
+          <img
+            src={project.bannerImage}
+            alt={project.title + ' preview'}
+            className="w-full h-full object-contain min-h-[220px] md:min-h-full rounded-none"
+            style={{ minHeight: '220px', aspectRatio: '16/9', maxHeight: '350px', background: '#0a1628' }}
           />
         </div>
 

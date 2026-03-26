@@ -243,7 +243,7 @@ function ChatSidebar() {
 
 function App() {
   const [showIntro, setShowIntro] = useState(true)
-
+  // Remove hoveredNavLabel and top label
   return (
     <BrowserRouter>
       {showIntro && <IntroSplash onDone={() => setShowIntro(false)} />}
